@@ -191,6 +191,3 @@ Each run writes, under a directory named after `--model_id`:
 - `test_metrics.txt` — accuracy, precision, recall, F1 (weighted and per-class)
 - `confusion_matrix.txt`
 - resource logs and plots — RAM/GPU usage and inference timing
-
-Inference timing reported in the paper was measured in a dedicated inference-only
-run, not from the figure printed at the end of training.
