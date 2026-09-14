@@ -5,7 +5,7 @@ Adaptive Mitigation in Vehicular Networks**
 
 An end-to-end VANET security framework that does not stop at detection. Malicious
 V2V messages are identified by a lightweight time-series classifier, and the
-network then decides — cooperatively, link by link — what to do about them.
+network then decides, cooperatively, link by link, what to do about them.
 
 ---
 
@@ -15,12 +15,12 @@ Anomaly detection in vehicular networks is passive: it flags suspicious messages
 but says nothing about how the network should respond. This project closes that
 loop with three components:
 
-**MIST** (Multi-scale Inter-period Sparse-Temporal Network) classifies messages
+**MIST** (Multi-scale Inter-Segment Temporal Network) classifies messages
 from the temporal evolution of vehicle behaviour across consecutive V2V
 transmissions, rather than judging each message in isolation.
 
 **MAGRL** represents the network as a dynamic communication graph — vehicles as
-nodes, messages as edges — and learns cooperative keep/prune decisions per link.
+nodes, messages as edges, and learns cooperative keep/prune decisions per link.
 Each vehicle acts as an agent on its own neighbourhood, trained with MAPPO under
 centralized training with decentralized execution.
 
@@ -53,7 +53,7 @@ Each directory has its own README with setup and usage details.
 
 ## Getting started
 
-Run the stages in order — each depends on the previous one's output.
+Run the stages in order, each depends on the previous one's output.
 
 ### 1. Generate data
 
@@ -171,22 +171,5 @@ with single-agent graph reinforcement learning:
   journal = {IEEE Transactions on Vehicular Technology},
   year    = {2026}
 }
-```
 
 ---
-
-## Acknowledgements
-
-MIST builds on [SparseTSF](https://github.com/lss-1138/SparseTSF) (Lin et al.,
-ICML 2024). The detection experiment scaffolding follows
-[Time-Series-Library](https://github.com/thuml/Time-Series-Library). MAGRL uses
-MAPPO (Yu et al., NeurIPS 2022) and GATv2 (Brody et al., ICLR 2022) via
-[PyTorch Geometric](https://pyg.org/). The simulation is built on
-[Veins](https://veins.car2x.org/), [OMNeT++](https://omnetpp.org/), and
-[SUMO](https://www.eclipse.org/sumo/).
-
----
-
-## License
-
-<!-- Add a license before making the repository public. -->
