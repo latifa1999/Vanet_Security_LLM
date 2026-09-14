@@ -29,8 +29,7 @@ training, an LLM proposes reward functions as executable code, which are validat
 and swapped in; a two-phase strategy explores diverse formulations before refining
 the best one found.
 
-
-
+<img width="1593" height="633" alt="pipline_LLM_v3" src="https://github.com/user-attachments/assets/8a714b44-eeba-487d-8236-dbb2ee511b9b" />
 
 *Offline training (left): simulated V2V traffic is classified by MIST, the
 predictions become edge features in the communication graph, and MAGRL learns
