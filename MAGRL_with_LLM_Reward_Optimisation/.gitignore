@@ -1,0 +1,5 @@
+outputs/
+*.pdf
+*.png
+*.ipynb
+EOF
