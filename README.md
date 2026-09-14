@@ -50,42 +50,6 @@ the live simulation, pruning or preserving links in real time.*
 
 Each directory has its own README with setup and usage details.
 
----
-
-## How the pieces connect
-
-```
-  OMNeT++ / SUMO / Veins
-      simulation
-           │
-           │  V2V messages + labels  (CSV, offline)
-           ▼
-  ┌──────────────────┐
-  │  MIST classifier │  →  Prediction, Prob_Malicious
-  └──────────────────┘
-           │
-           │  predictions become edge features
-           ▼
-  ┌──────────────────┐        ┌────────────────────┐
-  │  MAGRL (MAPPO)   │ ◄────► │  LLM reward search │
-  │  GATv2 policy    │        │  (training only)   │
-  └──────────────────┘        └────────────────────┘
-           │
-           │  keep / prune per link
-           ▼
-     back into the simulation      (TCP socket, online)
-```
-
-The simulation produces labelled V2V traffic. MIST is trained on it and used to
-score every message. Those scores, together with vehicle kinematics, form the edge
-features of the communication graph that MAGRL learns over. At inference time both
-trained models run behind a socket server the simulation queries on every
-transmission.
-
-The LLM participates only during offline training. It never touches the online
-decision path.
-
----
 
 ## Getting started
 
