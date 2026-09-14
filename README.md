@@ -147,18 +147,6 @@ expects an `HF_TOKEN` environment variable. Training can run without it using
 
 ---
 
-## Citation
-
-```bibtex
-@article{elbouga2026vanetllm,
-  title   = {LLM-Guided Multi-Agent Graph Reinforcement Learning for Anomaly
-             Detection and Adaptive Mitigation in Vehicular Networks},
-  author  = {El Bouga, Latifa and others},
-  journal = {Under review},
-  year    = {2026}
-}
-```
-
 This work builds on our earlier framework combining digital-twin anomaly detection
 with single-agent graph reinforcement learning:
 
