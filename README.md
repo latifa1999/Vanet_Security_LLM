@@ -148,17 +148,4 @@ expects an `HF_TOKEN` environment variable. Training can run without it using
 
 ---
 
-This work builds on our earlier framework combining digital-twin anomaly detection
-with single-agent graph reinforcement learning:
-
-```bibtex
-@article{elbouga2026dt,
-  title   = {Securing Vehicular Ad Hoc Networks via Digital Twin-Driven Anomaly
-             Detection and Graph Reinforcement Learning},
-  author  = {El Bouga, Latifa and Andam, A. and Bentahar, J. and
-             Amhoud, E. M. and Hedabou, M.},
-  journal = {IEEE Transactions on Vehicular Technology},
-  year    = {2026}
-}
-
 ---
